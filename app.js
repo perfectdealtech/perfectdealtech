@@ -2,64 +2,346 @@
 const products = [
   {
     id: 1,
-    name: "Smart Laptop Pro",
-    price: 999,
+    name: "HP Elitebook 745 G5 GAMING",
+    price: 3500,
     category: "laptops",
     images: [
-      "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=1800",
-      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=1800",
-      "./media/vids/vid2.mp4",
-      "./media/vids/vid2.mp4",
+      "./media/laptop1/img1.jpeg",
+      "./media/laptop1/img2.jpeg",
+      "./media/laptop1/img3.jpeg",
+      "./media/laptop1/img4.jpeg",
+      "./media/laptop1/img5.jpeg",
     ],
-    description: '15.6" FHD Display • 16GB RAM • 512GB SSD',
+    description: `
+  <details class="spec-toggle">
+    <summary>Technical Specifications</summary>
+    <ul class="spec-list">
+      <li>AMD Ryzen 5 PRO 2500U w/ Radeon Vega Mobile Gfx</li>
+      <li>256GB NVMe SSD</li>
+      <li>8GB DDR4 RAM</li>
+      <li>14" Full HD display</li>
+      <li>AMD Radeon RX Vega 8 Graphics - 1GB Dedicated</li>
+      <li>Keyboard Backlight</li>
+      <li>Fingerprint Sensor</li>
+      <li>HD Camera</li>
+      <li>1x USB Type-C</li>
+      <li>2x USB Type-A 3.2 Gen 1</li>
+      <li>HDMI, Ethernet LAN, Bluetooth</li>
+      <li>3.5 mm Audio Jack</li>
+      <li>2x Stereo Speakers - Bang & Olufsen</li>
+      <li>Excellent Battery</li>
+      <li>OEM Charger Included</li>
+    </ul>
+  </details>
+`,
   },
   {
     id: 2,
-    name: "Ultra Slim Laptop",
-    price: 899,
+    name: "MacBook Air (13-inch, 2015)",
+    price: 2800,
     category: "laptops",
     images: [
-      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=1800",
-      "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=1800",
-      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1800",
+      "./media/laptop2/img1.jpeg",
+      "./media/laptop2/img2.jpeg",
+      "./media/laptop2/img3.jpeg",
+      "./media/laptop2/img4.jpeg",
+      "./media/laptop2/img5.jpeg",
+      "./media/laptop2/img6.jpeg",
     ],
-    description: '15.6" FHD Display • 32GB RAM • 1TB SSD',
+    description: `
+  <details class="spec-toggle">
+    <summary>Technical Specifications</summary>
+    <ul class="spec-list">
+      <li>Intel Core i5 2.2GHz Dual-Core (Turbo Boost up to 3.2GHz)</li>
+      <li>256GB PCIe-based Flash Storage</li>
+      <li>4GB LPDDR3 RAM</li>
+      <li>Intel HD Graphics 6000</li>
+      <li>13.3-inch (Diagonal) Display</li>
+      <li>Full-Size Backlit Keyboard</li>
+      <li>720p FaceTime HD Camera</li>
+      <li>2 USB 3 Ports</li>
+      <li>Thunderbolt Port</li>
+      <li>3.5 mm Headphone Jack</li>
+      <li>Stereo Speakers</li>
+      <li>OEM Charger Included</li>
+    </ul>
+  </details>
+`,
   },
   {
     id: 3,
-    name: "Gaming Laptop",
-    price: 1299,
+    name: "Hp EliteBook 830 G7 Touchscreen",
+    price: 4300,
     category: "laptops",
     images: [
-      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1800",
-      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=1800",
-      "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=1800",
+      "./media/laptop3/img1.jpeg",
+      "./media/laptop3/img2.jpeg",
+      "./media/laptop3/img3.jpeg",
+      "./media/laptop3/img4.jpeg",
+      "./media/laptop3/img5.jpeg",
     ],
-    description: '15.6" FHD Display • 16GB RAM • 512GB SSD',
+    description: `
+  <details class="spec-toggle">
+    <summary>Technical Specifications</summary>
+    <ul class="spec-list">
+      <li>Intel® Core i5-10310U 10th Gen – 2.21GHz base speed with Intel Turbo Boost</li>
+      <li>256GB PCIe® NVMe™ SSD</li>
+      <li>16GB DDR4 RAM</li>
+      <li>13.3" 1080p Full HD Touch Display</li>
+      <li>Facial Recognition</li>
+      <li>Touchscreen Support</li>
+      <li>Fingerprint Scanner</li>
+      <li>Backlit Keyboard</li>
+      <li>High Definition Webcam with Microphone</li>
+      <li>WLAN Wi-Fi 6 (ax) & Bluetooth 5.2</li>
+      <li>3-Cell Lithium-Ion Battery</li>
+      <li>Bang & Olufsen Stereo Speakers</li>
+      <li>Excellent Battery Life</li>
+      <li>OEM Charger Included</li>
+    </ul>
+  </details>
+  <p class="product-price">₵4,300</p>
+`,
   },
   {
     id: 4,
-    name: "Premium Smartphone",
-    price: 799,
-    category: "phones",
+    name: "Hp EliteBook x360 1040 G8  ",
+    price: 7000,
+    category: "laptops",
     images: [
-      "https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=1800",
-      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1800",
-      "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?q=80&w=1800",
+      "./media/laptop4/img1.jpeg",
+      "./media/laptop4/img2.jpeg",
+      "./media/laptop4/img3.jpeg",
+      "./media/laptop4/img4.jpeg",
+      "./media/laptop4/img5.jpeg",
+      "./media/laptop4/img6.jpeg",
     ],
-    description: '6.7" OLED Display • 12GB RAM • 512GB Storage',
+    description: `
+  <details class="spec-toggle">
+    <summary>Technical Specifications</summary>
+    <ul class="spec-list">
+      <li>Intel® Core i7-1185G7 11th Gen – 3.00GHz base speed with Intel Turbo Boost Technology</li>
+      <li>512GB SSD Storage</li>
+      <li>16GB DDR4 RAM Options</li>
+      <li>14-inch 1080p Full HD Display with Integrated Privacy Screen</li>
+      <li>Facial Recognition</li>
+      <li>Touchscreen Support</li>
+      <li>Fingerprint Scanner</li>
+      <li>x360 Convertible Design</li>
+      <li>Backlit Keyboard</li>
+      <li>High Definition Webcam + Microphone</li>
+      <li>WLAN Wi-Fi 6 (ax) & Bluetooth 5.2</li>
+      <li>3-Cell Lithium-Ion Battery</li>
+      <li>Bang & Olufsen Stereo Speakers</li>
+      <li>Excellent Battery Life</li>
+      <li>OEM Charger Included</li>
+    </ul>
+  </details>
+`,
   },
   {
     id: 5,
-    name: "Bluetooth Headphones",
-    price: 149,
-    category: "accessories",
+    name: "HP ProBook x360 11 G5 EE",
+    price: 2000,
+    category: "laptops",
     images: [
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1800",
-      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=1800",
-      "https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?q=80&w=1800",
+      "./media/laptop5/img1.jpeg",
+      "./media/laptop5/img2.jpeg",
+      "./media/laptop5/img3.jpeg",
+      "./media/laptop5/img4.jpeg",
+      "./media/laptop5/img5.jpeg",
     ],
-    description: "Wireless • Noise Cancelling • 30hr Battery Life",
+    description: `
+  <details class="spec-toggle">
+    <summary>Technical Specifications</summary>
+    <ul class="spec-list">
+      <li>Intel® Celeron® N4020 CPU @ 1.10GHz</li>
+      <li>128GB Storage</li>
+      <li>4GB DDR4 RAM</li>
+      <li>Intel UHD Graphics 605</li>
+      <li>11.6-inch Screen Display</li>
+      <li>Touchscreen Support</li>
+      <li>x360 Convertible Design</li>
+      <li>2 USB Type-A Ports</li>
+      <li>1 USB Type-C Port</li>
+      <li>HDMI Port</li>
+      <li>Ethernet LAN Port</li>
+      <li>Excellent Battery Life</li>
+      <li>OEM Charger Included</li>
+    </ul>
+  </details>
+`,
+  },
+  {
+    id: 6,
+    name: "Lenovo ThinkPad L13 Yoga",
+    price: 4300,
+    category: "laptops",
+    images: [
+      "./media/laptop6/img1.jpeg",
+      "./media/laptop6/img2.jpeg",
+      "./media/laptop6/img3.jpeg",
+      "./media/laptop6/img4.jpeg",
+      "./media/laptop6/img5.jpeg",
+    ],
+    description: `
+  <details class="spec-toggle">
+    <summary>Technical Specifications</summary>
+    <ul class="spec-list">
+      <li>Intel Core i5-10210U 10th Gen Quad-Core @ 2.11GHz (up to 4.2GHz with Intel Turbo Boost)</li>
+      <li>256GB M.2 NVMe SSD</li>
+      <li>8GB DDR4 RAM (2667 MHz)</li>
+      <li>13.3" 1920 × 1080 IPS Touch Display</li>
+      <li>x360 Convertible Touchscreen</li>
+      <li>Intel UHD Graphics 620</li>
+      <li>Spill-Resistant Backlit Keyboard</li>
+      <li>ThinkPad Pen Pro Included 🖊️</li>
+      <li>Thunderbolt 3 / USB / HDMI Ports</li>
+      <li>MicroSD Media Card Reader</li>
+      <li>720p Front-Facing Webcam</li>
+      <li>Integrated Fingerprint Reader</li>
+      <li>Facial Recognition</li>
+      <li>Windows 11 Pro (64-Bit)</li>
+      <li>Excellent Battery Life</li>
+      <li>OEM Charger Included</li>
+    </ul>
+  </details>
+`,
+  },
+  {
+    id: 7,
+    name: "Lenovo Yoga 11e x360",
+    price: 2650,
+    category: "laptops",
+    images: [
+      "./media/laptop7/img1.jpeg",
+      "./media/laptop7/img2.jpeg",
+      "./media/laptop7/img3.jpeg",
+      "./media/laptop7/img4.jpeg",
+    ],
+    description: `
+  <details class="spec-toggle">
+    <summary>Technical Specifications</summary>
+    <ul class="spec-list">
+      <li>Intel® Celeron® N4100 Processor</li>
+      <li>128GB M.2 NVMe SSD</li>
+      <li>8GB DDR4 RAM (2400 MHz)</li>
+      <li>11.6-inch IPS Touch Display</li>
+      <li>x360 Convertible Touchscreen</li>
+      <li>Intel HD Graphics</li>
+      <li>Thunderbolt 3 / USB / HDMI / Ethernet Ports</li>
+      <li>Bluetooth & Wi-Fi Support</li>
+      <li>SD Card Slot</li>
+      <li>HD Front-Facing Webcam</li>
+      <li>Excellent Battery Life</li>
+      <li>OEM Accessories Included</li>
+    </ul>
+  </details>
+`,
+  },
+  {
+    id: 8,
+    name: "HP Elitebook 745 G5 GAMING",
+    price: 3700,
+    category: "laptops",
+    images: [
+      "./media/laptop1/img1.jpeg",
+      "./media/laptop1/img2.jpeg",
+      "./media/laptop1/img3.jpeg",
+      "./media/laptop1/img4.jpeg",
+      "./media/laptop1/img5.jpeg",
+    ],
+    description: `
+  <details class="spec-toggle">
+    <summary>Technical Specifications</summary>
+    <ul class="spec-list">
+      <li>AMD Ryzen 5 PRO 2500U w/ Radeon Vega Mobile Gfx</li>
+      <li>256GB NVMe SSD</li>
+      <li>8GB DDR4 RAM</li>
+      <li>14" Full HD display</li>
+      <li>AMD Radeon RX Vega 8 Graphics - 2GB Dedicated</li>
+      <li>Keyboard Backlight</li>
+      <li>Fingerprint Sensor</li>
+      <li>HD Camera</li>
+      <li>1x USB Type-C</li>
+      <li>2x USB Type-A 3.2 Gen 1</li>
+      <li>HDMI, Ethernet LAN, Bluetooth</li>
+      <li>3.5 mm Audio Jack</li>
+      <li>2x Stereo Speakers - Bang & Olufsen</li>
+      <li>Excellent Battery</li>
+      <li>OEM Charger Included</li>
+    </ul>
+  </details>
+`,
+  },
+  {
+    id: 9,
+    name: "MacBook Air (13-inch, 2015)",
+    price: 2800,
+    category: "laptops",
+    images: [
+      "./media/laptop2/img1.jpeg",
+      "./media/laptop2/img2.jpeg",
+      "./media/laptop2/img3.jpeg",
+      "./media/laptop2/img4.jpeg",
+      "./media/laptop2/img5.jpeg",
+      "./media/laptop2/img6.jpeg",
+    ],
+    description: `
+  <details class="spec-toggle">
+    <summary>Technical Specifications</summary>
+    <ul class="spec-list">
+      <li>Intel Core i7 2.2GHz Dual-Core (Turbo Boost up to 3.2GHz)</li>
+      <li>256GB PCIe-based Flash Storage</li>
+      <li>8GB LPDDR3 RAM</li>
+      <li>Intel HD Graphics 6000</li>
+      <li>13.3-inch (Diagonal) Display</li>
+      <li>Full-Size Backlit Keyboard</li>
+      <li>720p FaceTime HD Camera</li>
+      <li>2 USB 3 Ports</li>
+      <li>Thunderbolt Port</li>
+      <li>3.5 mm Headphone Jack</li>
+      <li>Stereo Speakers</li>
+      <li>OEM Charger Included</li>
+    </ul>
+  </details>
+`,
+  },
+  {
+    id: 10,
+    name: "Hp EliteBook x360 1040 G8  ",
+    price: 7300,
+    category: "laptops",
+    images: [
+      "./media/laptop4/img1.jpeg",
+      "./media/laptop4/img2.jpeg",
+      "./media/laptop4/img3.jpeg",
+      "./media/laptop4/img4.jpeg",
+      "./media/laptop4/img5.jpeg",
+      "./media/laptop4/img6.jpeg",
+    ],
+    description: `
+  <details class="spec-toggle">
+    <summary>Technical Specifications</summary>
+    <ul class="spec-list">
+      <li>Intel® Core i7-1185G7 11th Gen – 3.00GHz base speed with Intel Turbo Boost Technology</li>
+      <li>512GB SSD Storage</li>
+      <li>32GB DDR4 RAM Options</li>
+      <li>14-inch 1080p Full HD Display with Integrated Privacy Screen</li>
+      <li>Facial Recognition</li>
+      <li>Touchscreen Support</li>
+      <li>Fingerprint Scanner</li>
+      <li>x360 Convertible Design</li>
+      <li>Backlit Keyboard</li>
+      <li>High Definition Webcam + Microphone</li>
+      <li>WLAN Wi-Fi 6 (ax) & Bluetooth 5.2</li>
+      <li>3-Cell Lithium-Ion Battery</li>
+      <li>Bang & Olufsen Stereo Speakers</li>
+      <li>Excellent Battery Life</li>
+      <li>OEM Charger Included</li>
+    </ul>
+  </details>
+`,
   },
 ];
 
@@ -165,8 +447,8 @@ function showNotification(message, type = "success") {
       }" class="cart-item-image">
                         <div class="cart-item-details">
                             <h4 class="cart-item-title">${item.name}</h4>
-                            <p>$${item.price.toFixed(2)} × ${item.quantity}</p>
-                            <p class="cart-item-price">$${itemTotal.toFixed(
+                            <p>₵${item.price.toFixed(2)} × ${item.quantity}</p>
+                            <p class="cart-item-price">₵${itemTotal.toFixed(
                               2
                             )}</p>
                         </div>
@@ -246,70 +528,6 @@ function showNotification(message, type = "success") {
     window.getCart = () => cart;
     window.addToCart = addToCart;
     window.updateCart = updateCart;
-  }
-
-  document.addEventListener("DOMContentLoaded", init);
-})();
-
-// ========== PRODUCT DISPLAY MODULE ==========
-(function productDisplayModule() {
-  const productsContainer = document.getElementById("products-container");
-  const filterBtns = document.querySelectorAll(".filter-btn");
-
-  function generateProductCards() {
-    if (!productsContainer) return;
-
-    productsContainer.innerHTML = "";
-    products.forEach((product) => {
-      const productCard = document.createElement("article");
-      productCard.className = "product-card";
-      productCard.dataset.category = product.category;
-      productCard.dataset.id = product.id;
-
-      productCard.innerHTML = `
-                        <div class="product-image">
-                            <img src="${product.images[0]}" alt="${
-        product.name
-      }" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <h3>${product.name}</h3>
-                            <p class="product-category">${product.category}</p>
-                            <p class="product-price">$${product.price.toFixed(
-                              2
-                            )}</p>
-                            <div class="product-buttons">
-                                <button class="btn view-details">View Details</button>
-                                <button class="btn add-to-cart" data-id="${
-                                  product.id
-                                }">Add to Cart</button>
-                            </div>
-                        </div>
-                    `;
-      productsContainer.appendChild(productCard);
-    });
-  }
-
-  function filterProducts(category) {
-    const productCards = document.querySelectorAll(".product-card");
-    productCards.forEach((card) => {
-      card.style.display =
-        category === "all" || card.dataset.category === category
-          ? "block"
-          : "none";
-    });
-  }
-
-  function init() {
-    generateProductCards();
-
-    filterBtns.forEach((btn) => {
-      btn.addEventListener("click", function () {
-        filterBtns.forEach((b) => b.classList.remove("active"));
-        this.classList.add("active");
-        filterProducts(this.dataset.category);
-      });
-    });
   }
 
   document.addEventListener("DOMContentLoaded", init);
@@ -512,7 +730,7 @@ function showNotification(message, type = "success") {
     // Create product details
     productDetails.innerHTML = `
       <h2>${product.name}</h2>
-      <p class="product-price">$${product.price.toFixed(2)}</p>
+      <p class="product-price">₵${product.price.toFixed(2)}</p>
       <p>${product.description}</p>
       <button class="btn btn-primary add-to-cart" data-id="${
         product.id
@@ -627,7 +845,7 @@ function showNotification(message, type = "success") {
     let subtotal = 0;
     cartItems.forEach((item) => {
       const itemTotal = item.price * item.quantity;
-      message += `➤ ${item.name} (Qty: ${item.quantity}) - $${itemTotal.toFixed(
+      message += `➤ ${item.name} (Qty: ${item.quantity}) - ₵${itemTotal.toFixed(
         2
       )}\n`;
       subtotal += itemTotal;
@@ -636,9 +854,9 @@ function showNotification(message, type = "success") {
     const deliveryFee = 5;
     const grandTotal = subtotal + deliveryFee;
 
-    message += `\n💰 *Subtotal:* $${subtotal.toFixed(2)}\n`;
-    message += `🚚 *Delivery Fee:* $${deliveryFee.toFixed(2)}\n`;
-    message += `💵 *Total:* $${grandTotal.toFixed(2)}\n\n`;
+    message += `\n💰 *Subtotal:* ₵${subtotal.toFixed(2)}\n`;
+    message += `🚚 *Delivery Fee:* ₵${deliveryFee.toFixed(2)}\n`;
+    message += `💵 *Total:* ₵${grandTotal.toFixed(2)}\n\n`;
 
     if (notes) message += `📝 *Special Instructions:* ${notes}\n\n`;
     message += `⏰ *Order Time:* ${new Date().toLocaleString()}`;
@@ -793,7 +1011,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="product-info">
                         <h3>${product.name}</h3>
                         <p class="product-category">${product.category}</p>
-                        <p class="product-price">$${product.price.toFixed(
+                        <p class="product-price">₵${product.price.toFixed(
                           2
                         )}</p>
                         <div class="product-buttons">

@@ -189,17 +189,14 @@ button {
 }
 
 .logo-text-bottom {
-  font-size: 0.9rem; /* Reduced size for "Technologies" */
+  font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text-color); /* Standard text color */
-  background-color: var(
-    --light-color
-  ); /* This background color "covers" the border */
-  padding: 0 0.6rem; /* Reduced horizontal padding */
-  margin-top: -0.7rem; /* Adjusted negative margin to pull it up and overlap */
-  position: relative;
-  z-index: 2; /* Ensure this text is above the logo-box border */
-  white-space: nowrap; /* Prevent text from wrapping */
+  color: var(--text-color);
+  background-color: var(--light-color);
+  padding: 0 0.6rem;
+  margin-top: -0.7rem;
+  z-index: 2;
+  white-space: nowrap;
 }
 
 /* Responsive adjustments */
@@ -301,8 +298,8 @@ button {
   min-height: 400px;
   background: linear-gradient(
       135deg,
-      rgba(44, 62, 80, 0.8),
-      rgba(52, 152, 219, 0.8)
+      rgba(44, 62, 80, 0.4),
+      rgba(52, 152, 219, 0.4)
     ),
     url("https://images.unsplash.com/photo-1498049794561-7780e7231661?q=80&w=1800");
   background-size: cover;
@@ -335,7 +332,7 @@ button {
 .highlight {
   color: var(--secondary-color);
   font-weight: 700;
-  background-color: rgba(52, 152, 219, 0.1);
+  /* background-color: rgba(52, 152, 219, 0.1); */
   padding: 0.1em 0.3em;
   border-radius: 3px;
 }
@@ -372,6 +369,7 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
+  padding: 1rem;
 }
 
 .product-card {
@@ -390,24 +388,61 @@ button {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* ======== PRODUCT IMAGE STYLING (MAIN PAGE) ======== */
 .product-image {
   height: 220px;
   background-color: #f8f9fa;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+  position: relative;
 }
 
 .product-image img {
-  max-height: 100%;
-  width: auto;
-  object-fit: contain;
-  transition: var(--transition);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .product-card:hover .product-image img {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  filter: brightness(1.05);
+}
+
+/* Optional: Shine effect */
+.product-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+}
+
+.product-card:hover .product-image::after {
+  animation: shine 1s forwards;
+}
+
+@keyframes shine {
+  to {
+    left: 125%;
+  }
 }
 
 .product-info {
@@ -787,19 +822,24 @@ button {
   display: flex;
   height: 100%;
   transition: transform 0.5s ease;
-  padding: 0 0 3rem 0;
+  padding: 0 0 4rem 0;
 }
 
 .product-gallery img {
   min-width: 100%;
-  object-fit: contain;
-  padding: 2rem;
+  object-fit: cover;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.product-gallery img:hover {
+  transform: scale(1.05);
 }
 
 .gallery-prev,
 .gallery-next {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.5);
   color: var(--white);
@@ -850,7 +890,59 @@ button {
 .product-details {
   padding: 0.5rem;
   overflow-y: auto;
-  max-height: 400px;
+  max-height: 500px;
+}
+
+/* ======== PRODUCT DETAILS STYLING ======== */
+/* ======== Expandable Product Specs ======== */
+.spec-toggle {
+  margin-top: 1rem;
+  background-color: #f9f9f9;
+  border-radius: var(--border-radius);
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+}
+
+.spec-toggle summary {
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--primary-color);
+  list-style: none;
+  outline: none;
+}
+
+.spec-toggle[open] summary {
+  margin-bottom: 0.8rem;
+}
+
+.spec-toggle summary::marker,
+.spec-toggle summary::-webkit-details-marker {
+  display: none;
+}
+
+.spec-toggle summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.spec-toggle[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.spec-list {
+  list-style: disc inside;
+  padding-left: 1rem;
+  margin: 0;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.spec-list li {
+  margin-bottom: 0.4rem;
 }
 
 /* Notification */
