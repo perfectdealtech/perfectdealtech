@@ -618,7 +618,7 @@ function showNotification(message, type = "success") {
       return false;
     }
 
-    let message = `📋 *NEW ORDER - TECH GENIE* 📋\n\n`;
+    let message = `📋 *NEW ORDER - Perfect Deal Technologies* 📋\n\n`;
     message += `👤 *Customer:* ${name}\n`;
     message += `📞 *Phone:* ${phone}\n`;
     message += `🏠 *Address:* ${address}\n\n`;
@@ -644,7 +644,7 @@ function showNotification(message, type = "success") {
     message += `⏰ *Order Time:* ${new Date().toLocaleString()}`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/233204376083?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/233203655458?text=${encodedMessage}`;
 
     window.open(whatsappUrl, "_blank");
 

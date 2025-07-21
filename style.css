@@ -134,7 +134,7 @@ button {
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 1rem 0;
+  padding: 0 0;
 }
 
 .header-container {
@@ -151,11 +151,69 @@ button {
   gap: 1rem;
 }
 
-.logo {
+/* .logo {
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--primary-color);
   margin-top: 0.4rem;
+} */
+
+.logo-container-custom {
+  display: inline-flex; /* Allows it to wrap content tightly */
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center; /* Centers "Technologies" under the box */
+  font-family: inherit; /* Inherit font from body */
+  padding: 20px; /* Overall padding for the logo area */
+}
+
+.logo-box {
+  background-color: var(--white); /* White background for the box */
+  border: 2px solid var(--primary-color); /* Visible border */
+  border-radius: var(--border-radius); /* Rounded corners */
+  padding: 0.7rem 1.5rem; /* Reduced padding inside the box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Needed for z-index to work correctly */
+  z-index: 1; /* Ensure the box is above the "Technologies" background where it overlaps */
+  box-shadow: var(--shadow); /* Subtle shadow for depth */
+}
+
+.logo-text-top {
+  font-size: 1.4rem; /* Reduced size for "Perfect Deals" */
+  font-weight: 700;
+  color: var(--primary-color); /* Dark text color */
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-transform: uppercase; /* Optional: Make it uppercase */
+  letter-spacing: 1px; /* Optional: Add some letter spacing */
+}
+
+.logo-text-bottom {
+  font-size: 0.9rem; /* Reduced size for "Technologies" */
+  font-weight: 500;
+  color: var(--text-color); /* Standard text color */
+  background-color: var(
+    --light-color
+  ); /* This background color "covers" the border */
+  padding: 0 0.6rem; /* Reduced horizontal padding */
+  margin-top: -0.7rem; /* Adjusted negative margin to pull it up and overlap */
+  position: relative;
+  z-index: 2; /* Ensure this text is above the logo-box border */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo-text-top {
+    font-size: 1.2rem; /* Further reduced for smaller screens */
+  }
+  .logo-text-bottom {
+    font-size: 0.8rem; /* Further reduced for smaller screens */
+    margin-top: -0.6rem; /* Adjusted negative margin */
+  }
+  .logo-box {
+    padding: 0.6rem 1.2rem; /* Further reduced padding */
+  }
 }
 
 .mobile-menu-toggle {
@@ -274,7 +332,13 @@ button {
   margin-bottom: 2rem;
   color: var(--white);
 }
-
+.highlight {
+  color: var(--secondary-color);
+  font-weight: 700;
+  background-color: rgba(52, 152, 219, 0.1);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
 /* ======== PRODUCTS SECTION ======== */
 .products-section {
   padding: 3rem 0;
