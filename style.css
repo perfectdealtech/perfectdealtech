@@ -807,16 +807,13 @@ button {
   max-width: 1000px;
   max-height: 90vh;
   display: grid;
-  grid-template-columns: 1fr;
-  overflow-y: auto; /* <-- Enables vertical scrolling */
-  overflow-x: hidden; /* Optional: prevents horizontal scroll */
-  padding-right: 0.5rem; /* Optional: give room for scrollbar */
-  scroll-behavior: smooth;
+  grid-template-rows: auto 1fr; /* gallery (fixed), details (scrollable) */
+  overflow: hidden;
 }
 
 .product-gallery-container {
   position: relative;
-  height: 400px;
+  height: 300px;
   overflow: hidden;
   background-color: #f8f9fa;
 }
@@ -893,7 +890,7 @@ button {
 .product-details {
   padding: 0.5rem;
   overflow-y: auto;
-  max-height: 500px;
+  max-height: none; /* remove limit so grid handles it */
 }
 
 /* ======== PRODUCT DETAILS STYLING ======== */

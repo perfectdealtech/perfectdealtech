@@ -100,7 +100,6 @@ const products = [
       <li>OEM Charger Included</li>
     </ul>
   </details>
-  <p class="product-price">₵4,300</p>
 `,
   },
   {
