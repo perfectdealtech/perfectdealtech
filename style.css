@@ -404,7 +404,7 @@ button {
 .product-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.4s ease, filter 0.3s ease;
 }
 
@@ -808,7 +808,10 @@ button {
   max-height: 90vh;
   display: grid;
   grid-template-columns: 1fr;
-  overflow: hidden;
+  overflow-y: auto; /* <-- Enables vertical scrolling */
+  overflow-x: hidden; /* Optional: prevents horizontal scroll */
+  padding-right: 0.5rem; /* Optional: give room for scrollbar */
+  scroll-behavior: smooth;
 }
 
 .product-gallery-container {
