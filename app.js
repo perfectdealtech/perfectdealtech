@@ -104,7 +104,7 @@ const products = [
   },
   {
     id: 4,
-    name: "Hp EliteBook x360 1040 G8  ",
+    name: "Hp EliteBook x360 1040 G8",
     price: 7000,
     category: "laptops",
     images: [
@@ -308,7 +308,7 @@ const products = [
   },
   {
     id: 10,
-    name: "Hp EliteBook x360 1040 G8  ",
+    name: "Hp EliteBook x360 1040 G8",
     price: 7300,
     category: "laptops",
     images: [
@@ -498,7 +498,7 @@ function showNotification(message, type = "success") {
         e.preventDefault();
         if (cartModal) {
           cartModal.style.display = "flex";
-          document.body.style.overflow = "hidden";
+          document.body.classList.add("modal-open");
           updateCart();
         }
       });
@@ -510,7 +510,7 @@ function showNotification(message, type = "success") {
         const modal = btn.closest(".modal");
         if (modal) {
           modal.style.display = "none";
-          document.body.style.overflow = "auto";
+          document.body.classList.remove("modal-open");
         }
       });
     });
@@ -519,7 +519,7 @@ function showNotification(message, type = "success") {
     window.addEventListener("click", (e) => {
       if (e.target.classList.contains("modal")) {
         e.target.style.display = "none";
-        document.body.style.overflow = "auto";
+        document.body.classList.remove("modal-open");
       }
     });
 
@@ -650,6 +650,7 @@ function showNotification(message, type = "success") {
     document.querySelectorAll(".product-gallery img").forEach((img) => {
       img.classList.remove("zoomed");
       img.style.transform = "scale(1)";
+      img.style.transformOrigin = "center center";
     });
   }
 
@@ -760,6 +761,34 @@ function showNotification(message, type = "success") {
     return container;
   }
 
+  // Swipe navigation function
+  function enableSwipeNavigation(container, onSwipeLeft, onSwipeRight) {
+    let startX = 0;
+    let endX = 0;
+
+    container.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    container.addEventListener("touchmove", (e) => {
+      endX = e.touches[0].clientX;
+    });
+
+    container.addEventListener("touchend", () => {
+      const deltaX = startX - endX;
+      const threshold = 50; // Minimum swipe distance
+
+      if (deltaX > threshold) {
+        onSwipeLeft(); // Swipe left → next
+      } else if (deltaX < -threshold) {
+        onSwipeRight(); // Swipe right → previous
+      }
+
+      startX = 0;
+      endX = 0;
+    });
+  }
+
   function openProductModal(product) {
     currentSlide = 0; // Reset to first slide
     if (!productGallery || !productDetails || !galleryIndicators) return;
@@ -790,7 +819,7 @@ function showNotification(message, type = "success") {
     productDetails.innerHTML = `
       <h2>${product.name}</h2>
       <p class="product-price">₵${product.price.toFixed(2)}</p>
-      <p>${product.description}</p>
+      <div>${product.description}</div>
       <button class="btn btn-primary add-to-cart" data-id="${
         product.id
       }">Add to Cart</button>
@@ -810,7 +839,25 @@ function showNotification(message, type = "success") {
 
     // Show modal
     productModal.style.display = "flex";
-    document.body.style.overflow = "hidden";
+    document.body.classList.add("modal-open");
+
+    // Enable swipe navigation
+    enableSwipeNavigation(
+      productGallery,
+      () => {
+        // Swipe left
+        if (currentSlide < productGallery.children.length - 1) {
+          goToSlide(currentSlide + 1);
+        }
+      },
+      () => {
+        // Swipe right
+        if (currentSlide > 0) {
+          goToSlide(currentSlide - 1);
+        }
+      }
+    );
+
     currentSlide = 0;
     updateGallery();
   }
@@ -833,7 +880,15 @@ function showNotification(message, type = "success") {
   if (closeModal) {
     closeModal.addEventListener("click", () => {
       productModal.style.display = "none";
-      document.body.style.overflow = "auto";
+      document.body.classList.remove("modal-open");
+
+      // Reset image zoom
+      const galleryImages = productGallery.querySelectorAll("img");
+      galleryImages.forEach((img) => {
+        img.classList.remove("zoomed");
+        img.style.transform = "scale(1)";
+        img.style.transformOrigin = "center center";
+      });
     });
   }
 
@@ -841,7 +896,15 @@ function showNotification(message, type = "success") {
   productModal.addEventListener("click", (e) => {
     if (e.target === productModal) {
       productModal.style.display = "none";
-      document.body.style.overflow = "auto";
+      document.body.classList.remove("modal-open");
+
+      // Reset image zoom
+      const galleryImages = productGallery.querySelectorAll("img");
+      galleryImages.forEach((img) => {
+        img.classList.remove("zoomed");
+        img.style.transform = "scale(1)";
+        img.style.transformOrigin = "center center";
+      });
     }
   });
 
@@ -867,6 +930,7 @@ function showNotification(message, type = "success") {
 
   // Initialize gallery
   updateGallery();
+  window.openProductModal = openProductModal;
 })();
 
 // ========== CHECKOUT MODULE ==========
@@ -940,7 +1004,7 @@ function showNotification(message, type = "success") {
     }
 
     checkoutModal.style.display = "none";
-    document.body.style.overflow = "auto";
+    document.body.classList.remove("modal-open");
     checkoutForm.reset();
     return true;
   }
@@ -959,7 +1023,7 @@ function showNotification(message, type = "success") {
         if (cartModal) cartModal.style.display = "none";
         if (checkoutModal) {
           checkoutModal.style.display = "flex";
-          document.body.style.overflow = "hidden";
+          document.body.classList.add("modal-open");
           hideFormMessage();
         }
       });
@@ -987,12 +1051,12 @@ function showNotification(message, type = "success") {
     if (cancelCheckoutBtn) {
       cancelCheckoutBtn.addEventListener("click", () => {
         checkoutModal.style.display = "none";
-        document.body.style.overflow = "auto";
+        document.body.classList.remove("modal-open");
         checkoutForm.reset();
         hideFormMessage();
         if (cartModal) {
           cartModal.style.display = "flex";
-          document.body.style.overflow = "hidden";
+          document.body.classList.add("modal-open");
         }
       });
     }
@@ -1059,7 +1123,7 @@ document.addEventListener("click", (e) => {
       const productModal = document.getElementById("product-modal");
       if (productModal && productModal.style.display === "flex") {
         productModal.style.display = "none";
-        document.body.style.overflow = "auto";
+        document.body.classList.remove("modal-open");
       }
     }
   }
@@ -1096,7 +1160,7 @@ document.addEventListener("DOMContentLoaded", () => {
     productsContainer.appendChild(productCard);
   });
 
-  // ✅ Add Filter Functionality AFTER products are loaded
+  // Add Filter Functionality AFTER products are loaded
   const filterButtons = document.querySelectorAll(".filter-btn");
   const productCards = document.querySelectorAll(".product-card");
 
