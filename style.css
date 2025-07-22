@@ -499,6 +499,8 @@ button {
 }
 
 .add-to-cart {
+  margin-top: 0.5rem;
+  padding: 0.5rem !important;
   background-color: var(--secondary-color);
   color: var(--white);
 }
@@ -912,7 +914,7 @@ button {
 }
 
 .product-details {
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   overflow-y: auto;
   max-height: none; /* remove limit so grid handles it */
 }

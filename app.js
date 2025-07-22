@@ -347,6 +347,7 @@ const products = [
 let cart = [];
 
 // ========== UTILITY FUNCTIONS ==========
+let savedScrollPosition = 0;
 function showNotification(message, type = "success") {
   const notification = document.createElement("div");
   notification.className = `notification ${type}`;
@@ -360,6 +361,14 @@ function showNotification(message, type = "success") {
       setTimeout(() => notification.remove(), 300);
     }, 1500);
   }, 10);
+}
+
+function saveScrollPosition() {
+  savedScrollPosition = window.scrollY;
+}
+
+function restoreScrollPosition() {
+  window.scrollTo(0, savedScrollPosition);
 }
 
 // ========== MOBILE MENU MODULE ==========
@@ -497,6 +506,7 @@ function showNotification(message, type = "success") {
       btn.addEventListener("click", (e) => {
         e.preventDefault();
         if (cartModal) {
+          saveScrollPosition();
           cartModal.style.display = "flex";
           document.body.classList.add("modal-open");
           updateCart();
@@ -511,6 +521,7 @@ function showNotification(message, type = "success") {
         if (modal) {
           modal.style.display = "none";
           document.body.classList.remove("modal-open");
+          restoreScrollPosition(); // Restore scroll position
         }
       });
     });
@@ -520,6 +531,7 @@ function showNotification(message, type = "success") {
       if (e.target.classList.contains("modal")) {
         e.target.style.display = "none";
         document.body.classList.remove("modal-open");
+        restoreScrollPosition();
       }
     });
 
@@ -629,7 +641,7 @@ function showNotification(message, type = "success") {
 
   function updateGallery() {
     if (!productGallery.children.length) return;
-    const slideWidth = productGallery.clientWidth;
+    const slideWidth = productGallery.offsetWidth;
     productGallery.style.transform = `translateX(-${
       currentSlide * slideWidth
     }px)`;
@@ -644,8 +656,13 @@ function showNotification(message, type = "success") {
   }
 
   function goToSlide(index) {
+    productGallery.style.transition = "none";
     currentSlide = index;
     updateGallery();
+
+    setTimeout(() => {
+      productGallery.style.transition = "";
+    }, 50);
 
     document.querySelectorAll(".product-gallery img").forEach((img) => {
       img.classList.remove("zoomed");
@@ -790,6 +807,7 @@ function showNotification(message, type = "success") {
   }
 
   function openProductModal(product) {
+    saveScrollPosition();
     currentSlide = 0; // Reset to first slide
     if (!productGallery || !productDetails || !galleryIndicators) return;
 
@@ -860,6 +878,7 @@ function showNotification(message, type = "success") {
 
     currentSlide = 0;
     updateGallery();
+    window.addEventListener("resize", updateGallery);
   }
 
   // Navigation handlers
@@ -881,6 +900,7 @@ function showNotification(message, type = "success") {
     closeModal.addEventListener("click", () => {
       productModal.style.display = "none";
       document.body.classList.remove("modal-open");
+      restoreScrollPosition(); // Restore scroll position
 
       // Reset image zoom
       const galleryImages = productGallery.querySelectorAll("img");
@@ -890,6 +910,7 @@ function showNotification(message, type = "success") {
         img.style.transformOrigin = "center center";
       });
     });
+    window.removeEventListener("resize", updateGallery);
   }
 
   // Close when clicking outside modal
@@ -897,6 +918,7 @@ function showNotification(message, type = "success") {
     if (e.target === productModal) {
       productModal.style.display = "none";
       document.body.classList.remove("modal-open");
+      restoreScrollPosition(); // Restore scroll position
 
       // Reset image zoom
       const galleryImages = productGallery.querySelectorAll("img");
@@ -1022,6 +1044,7 @@ function showNotification(message, type = "success") {
 
         if (cartModal) cartModal.style.display = "none";
         if (checkoutModal) {
+          saveScrollPosition();
           checkoutModal.style.display = "flex";
           document.body.classList.add("modal-open");
           hideFormMessage();
@@ -1045,6 +1068,7 @@ function showNotification(message, type = "success") {
         }
 
         sendOrderToWhatsApp(name, phone, address, notes);
+        restoreScrollPosition();
       });
     }
 
@@ -1052,6 +1076,7 @@ function showNotification(message, type = "success") {
       cancelCheckoutBtn.addEventListener("click", () => {
         checkoutModal.style.display = "none";
         document.body.classList.remove("modal-open");
+        restoreScrollPosition(); // Restore scroll position
         checkoutForm.reset();
         hideFormMessage();
         if (cartModal) {
