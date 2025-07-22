@@ -646,6 +646,11 @@ function showNotification(message, type = "success") {
   function goToSlide(index) {
     currentSlide = index;
     updateGallery();
+
+    document.querySelectorAll(".product-gallery img").forEach((img) => {
+      img.classList.remove("zoomed");
+      img.style.transform = "scale(1)";
+    });
   }
 
   // Helper function to create image element
@@ -654,7 +659,62 @@ function showNotification(message, type = "success") {
     img.src = src;
     img.alt = alt;
     img.loading = "lazy";
+
+    // Double-tap zoom functionality
+    let lastTap = 0;
+    img.addEventListener("touchend", function (e) {
+      const currentTime = new Date().getTime();
+      const tapLength = currentTime - lastTap;
+
+      if (tapLength < 300 && tapLength > 0) {
+        e.preventDefault();
+        const touch = e.changedTouches[0];
+        toggleImageZoom(img, touch.clientX, touch.clientY);
+      }
+
+      lastTap = currentTime;
+    });
+
+    // Double-click for desktop
+    img.addEventListener("dblclick", function (e) {
+      e.stopPropagation();
+      toggleImageZoom(img, e.clientX, e.clientY);
+    });
+
     return img;
+  }
+
+  // New function to handle zoom toggle
+  function toggleImageZoom(img, x = null, y = null) {
+    const zoomed = img.classList.contains("zoomed");
+
+    if (zoomed) {
+      img.classList.remove("zoomed");
+      img.style.transform = "scale(1)";
+      img.style.transformOrigin = "center center";
+    } else {
+      // Reset other zoomed images
+      document
+        .querySelectorAll(".product-gallery img.zoomed")
+        .forEach((zoomedImg) => {
+          zoomedImg.classList.remove("zoomed");
+          zoomedImg.style.transform = "scale(1)";
+          zoomedImg.style.transformOrigin = "center center";
+        });
+
+      img.classList.add("zoomed");
+      img.style.transform = "scale(2.5)";
+
+      if (x !== null && y !== null) {
+        const rect = img.getBoundingClientRect();
+        const originX = ((x - rect.left) / rect.width) * 100;
+        const originY = ((y - rect.top) / rect.height) * 100;
+
+        img.style.transformOrigin = `${originX}% ${originY}%`;
+      } else {
+        img.style.transformOrigin = "center center";
+      }
+    }
   }
 
   // Helper function to create video element
@@ -782,6 +842,14 @@ function showNotification(message, type = "success") {
     if (e.target === productModal) {
       productModal.style.display = "none";
       document.body.style.overflow = "auto";
+    }
+  });
+
+  // Prevent unwanted zoom on double-click outside gallery
+  productModal.addEventListener("dblclick", (e) => {
+    const gallery = productModal.querySelector(".product-gallery");
+    if (!gallery.contains(e.target)) {
+      e.preventDefault();
     }
   });
 
@@ -999,8 +1067,9 @@ document.addEventListener("click", (e) => {
 
 // Initialize the page
 document.addEventListener("DOMContentLoaded", () => {
-  // Generate initial products
   const productsContainer = document.getElementById("products-container");
+
+  // Generate product cards
   products.forEach((product) => {
     const productCard = document.createElement("article");
     productCard.className = "product-card";
@@ -1008,25 +1077,46 @@ document.addEventListener("DOMContentLoaded", () => {
     productCard.dataset.id = product.id;
 
     productCard.innerHTML = `
-                    <div class="product-image">
-                        <img src="${product.images[0]}" alt="${
-      product.name
-    }" loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3>${product.name}</h3>
-                        <p class="product-category">${product.category}</p>
-                        <p class="product-price">₵${product.price.toFixed(
-                          2
-                        )}</p>
-                        <div class="product-buttons">
-                            <button class="btn view-details">View Details</button>
-                            <button class="btn add-to-cart" data-id="${
-                              product.id
-                            }">Add to Cart</button>
-                        </div>
-                    </div>
-                `;
+      <div class="product-image">
+        <img src="${product.images[0]}" alt="${product.name}" loading="lazy">
+      </div>
+      <div class="product-info">
+        <h3>${product.name}</h3>
+        <p class="product-category">${product.category}</p>
+        <p class="product-price">₵${product.price.toFixed(2)}</p>
+        <div class="product-buttons">
+          <button class="btn view-details">View Details</button>
+          <button class="btn add-to-cart" data-id="${
+            product.id
+          }">Add to Cart</button>
+        </div>
+      </div>
+    `;
+
     productsContainer.appendChild(productCard);
+  });
+
+  // ✅ Add Filter Functionality AFTER products are loaded
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const productCards = document.querySelectorAll(".product-card");
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const category = btn.dataset.category;
+
+      // Highlight active button
+      filterButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      // Show/hide product cards
+      productCards.forEach((card) => {
+        const cardCategory = card.dataset.category;
+        if (category === "all" || cardCategory === category) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
   });
 });

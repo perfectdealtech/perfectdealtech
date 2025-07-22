@@ -30,6 +30,7 @@ body {
   color: var(--text-color);
   background-color: var(--light-color);
   overflow-x: hidden;
+  touch-action: manipulation;
 }
 
 h1,
@@ -390,7 +391,7 @@ button {
 
 /* ======== PRODUCT IMAGE STYLING (MAIN PAGE) ======== */
 .product-image {
-  height: 220px;
+  height: 300px;
   background-color: #f8f9fa;
   display: flex;
   align-items: center;
@@ -404,7 +405,7 @@ button {
 .product-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   transition: transform 0.4s ease, filter 0.3s ease;
 }
 
@@ -813,23 +814,32 @@ button {
 
 .product-gallery-container {
   position: relative;
-  height: 300px;
+  /* height: 300px; */
   overflow: hidden;
   background-color: #f8f9fa;
+  padding: 0.5rem;
 }
 
 .product-gallery {
   display: flex;
-  height: 100%;
+  /* height: 100%; */
   transition: transform 0.5s ease;
-  padding: 0 0 4rem 0;
+  /* padding: 0 0 4rem 0; */
 }
 
 .product-gallery img {
   min-width: 100%;
+  height: auto;
+  max-height: 400px;
   object-fit: cover;
-  padding: 1rem;
+  padding: 0.5rem;
+  touch-action: auto;
   transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+.product-gallery img.zoomed {
+  cursor: move;
+  z-index: 20;
 }
 
 .product-gallery img:hover {
