@@ -24,12 +24,14 @@
           <button class="mobile-menu-toggle" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
           </button>
-          <div class="logo-container-custom">
-            <div class="logo-box">
-              <span class="logo-text-top">PerfectDeal</span>
+          <a href="index.html" class="logo-link">
+            <div class="logo-container-custom">
+              <div class="logo-box">
+                <span class="logo-text-top">PerfectDeal</span>
+              </div>
+              <span class="logo-text-bottom">Technologies</span>
             </div>
-            <span class="logo-text-bottom">Technologies</span>
-          </div>
+          </a>
         </div>
         <nav class="main-nav">
           <ul class="nav-list">
@@ -92,7 +94,7 @@
 
       <!-- About Section -->
       <section id="about" class="about-section">
-        <h2>About PerfectDeal Technologies</h2>
+        <h2>About <span class="highlight">PerfectDeal Technologies</span></h2>
         <div class="about-content">
           <div class="about-text">
             <p>
@@ -159,7 +161,16 @@
             <p>
               <i class="fas fa-envelope"></i> perfectdealtechnologies@gmail.com
             </p>
-            <p><i class="fas fa-map-marker-alt"></i> Tech-Kumasi, Ghana</p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i>
+              <a
+                href="https://www.google.com/maps?q=Tech-Kumasi,Ghana"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Tech-Kumasi, Ghana
+              </a>
+            </p>
 
             <div class="social-media">
               <h3>Follow Us</h3>
@@ -229,10 +240,10 @@
         </div>
         <div class="modal-footer">
           <p class="cart-total">
-            Subtotal: $<span id="cart-total-amount">0.00</span>
+            Subtotal: ₵<span id="cart-total-amount">0.00</span>
           </p>
-          <p class="delivery-fee">Delivery Fee: $5.00</p>
-          <p class="grand-total">Total: $<span id="grand-total">0.00</span></p>
+          <p class="delivery-fee">Delivery Fee: ₵5.00</p>
+          <p class="grand-total">Total: ₵<span id="grand-total">0.00</span></p>
           <button class="btn btn-primary checkout-btn">
             <i class="fab fa-whatsapp"></i> Complete Order via WhatsApp
           </button>

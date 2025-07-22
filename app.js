@@ -358,7 +358,7 @@ function showNotification(message, type = "success") {
     setTimeout(() => {
       notification.classList.remove("show");
       setTimeout(() => notification.remove(), 300);
-    }, 3000);
+    }, 1500);
   }, 10);
 }
 
@@ -981,12 +981,18 @@ function showNotification(message, type = "success") {
 
 // ========== GLOBAL EVENT LISTENERS ==========
 document.addEventListener("click", (e) => {
-  // Add to cart buttons (including those in modals)
   if (e.target.classList.contains("add-to-cart")) {
     const productId = parseInt(e.target.dataset.id);
     const product = products.find((p) => p.id === productId);
     if (product && window.addToCart) {
       window.addToCart(product);
+
+      // Close the product modal if visible
+      const productModal = document.getElementById("product-modal");
+      if (productModal && productModal.style.display === "flex") {
+        productModal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
     }
   }
 });
