@@ -13,27 +13,27 @@ const products = [
       "./media/laptop1/img5.jpeg",
     ],
     description: `
-  <details class="spec-toggle">
-    <summary>Technical Specifications</summary>
-    <ul class="spec-list">
-      <li>AMD Ryzen 5 PRO 2500U w/ Radeon Vega Mobile Gfx</li>
-      <li>256GB NVMe SSD</li>
-      <li>8GB DDR4 RAM</li>
-      <li>14" Full HD display</li>
-      <li>AMD Radeon RX Vega 8 Graphics - 1GB Dedicated</li>
-      <li>Keyboard Backlight</li>
-      <li>Fingerprint Sensor</li>
-      <li>HD Camera</li>
-      <li>1x USB Type-C</li>
-      <li>2x USB Type-A 3.2 Gen 1</li>
-      <li>HDMI, Ethernet LAN, Bluetooth</li>
-      <li>3.5 mm Audio Jack</li>
-      <li>2x Stereo Speakers - Bang & Olufsen</li>
-      <li>Excellent Battery</li>
-      <li>OEM Charger Included</li>
-    </ul>
-  </details>
-`,
+          <details class="spec-toggle">
+            <summary>Technical Specifications</summary>
+            <ul class="spec-list">
+              <li>AMD Ryzen 5 PRO 2500U w/ Radeon Vega Mobile Gfx</li>
+              <li>256GB NVMe SSD</li>
+              <li>8GB DDR4 RAM</li>
+              <li>14" Full HD display</li>
+              <li>AMD Radeon RX Vega 8 Graphics - 1GB Dedicated</li>
+              <li>Keyboard Backlight</li>
+              <li>Fingerprint Sensor</li>
+              <li>HD Camera</li>
+              <li>1x USB Type-C</li>
+              <li>2x USB Type-A 3.2 Gen 1</li>
+              <li>HDMI, Ethernet LAN, Bluetooth</li>
+              <li>3.5 mm Audio Jack</li>
+              <li>2x Stereo Speakers - Bang & Olufsen</li>
+              <li>Excellent Battery</li>
+              <li>OEM Charger Included</li>
+            </ul>
+          </details>
+        `,
   },
   {
     id: 2,
@@ -49,24 +49,24 @@ const products = [
       "./media/laptop2/img6.jpeg",
     ],
     description: `
-  <details class="spec-toggle">
-    <summary>Technical Specifications</summary>
-    <ul class="spec-list">
-      <li>Intel Core i5 2.2GHz Dual-Core (Turbo Boost up to 3.2GHz)</li>
-      <li>256GB PCIe-based Flash Storage</li>
-      <li>4GB LPDDR3 RAM</li>
-      <li>Intel HD Graphics 6000</li>
-      <li>13.3-inch (Diagonal) Display</li>
-      <li>Full-Size Backlit Keyboard</li>
-      <li>720p FaceTime HD Camera</li>
-      <li>2 USB 3 Ports</li>
-      <li>Thunderbolt Port</li>
-      <li>3.5 mm Headphone Jack</li>
-      <li>Stereo Speakers</li>
-      <li>OEM Charger Included</li>
-    </ul>
-  </details>
-`,
+          <details class="spec-toggle">
+            <summary>Technical Specifications</summary>
+            <ul class="spec-list">
+              <li>Intel Core i5 2.2GHz Dual-Core (Turbo Boost up to 3.2GHz)</li>
+              <li>256GB PCIe-based Flash Storage</li>
+              <li>4GB LPDDR3 RAM</li>
+              <li>Intel HD Graphics 6000</li>
+              <li>13.3-inch (Diagonal) Display</li>
+              <li>Full-Size Backlit Keyboard</li>
+              <li>720p FaceTime HD Camera</li>
+              <li>2 USB 3 Ports</li>
+              <li>Thunderbolt Port</li>
+              <li>3.5 mm Headphone Jack</li>
+              <li>Stereo Speakers</li>
+              <li>OEM Charger Included</li>
+            </ul>
+          </details>
+        `,
   },
   {
     id: 3,
@@ -81,26 +81,26 @@ const products = [
       "./media/laptop3/img5.jpeg",
     ],
     description: `
-  <details class="spec-toggle">
-    <summary>Technical Specifications</summary>
-    <ul class="spec-list">
-      <li>Intel® Core i5-10310U 10th Gen – 2.21GHz base speed with Intel Turbo Boost</li>
-      <li>256GB PCIe® NVMe™ SSD</li>
-      <li>16GB DDR4 RAM</li>
-      <li>13.3" 1080p Full HD Touch Display</li>
-      <li>Facial Recognition</li>
-      <li>Touchscreen Support</li>
-      <li>Fingerprint Scanner</li>
-      <li>Backlit Keyboard</li>
-      <li>High Definition Webcam with Microphone</li>
-      <li>WLAN Wi-Fi 6 (ax) & Bluetooth 5.2</li>
-      <li>3-Cell Lithium-Ion Battery</li>
-      <li>Bang & Olufsen Stereo Speakers</li>
-      <li>Excellent Battery Life</li>
-      <li>OEM Charger Included</li>
-    </ul>
-  </details>
-`,
+          <details class="spec-toggle">
+            <summary>Technical Specifications</summary>
+            <ul class="spec-list">
+              <li>Intel® Core i5-10310U 10th Gen – 2.21GHz base speed with Intel Turbo Boost</li>
+              <li>256GB PCIe® NVMe™ SSD</li>
+              <li>16GB DDR4 RAM</li>
+              <li>13.3" 1080p Full HD Touch Display</li>
+              <li>Facial Recognition</li>
+              <li>Touchscreen Support</li>
+              <li>Fingerprint Scanner</li>
+              <li>Backlit Keyboard</li>
+              <li>High Definition Webcam with Microphone</li>
+              <li>WLAN Wi-Fi 6 (ax) & Bluetooth 5.2</li>
+              <li>3-Cell Lithium-Ion Battery</li>
+              <li>Bang & Olufsen Stereo Speakers</li>
+              <li>Excellent Battery Life</li>
+              <li>OEM Charger Included</li>
+            </ul>
+          </details>
+        `,
   },
   {
     id: 4,
@@ -116,27 +116,27 @@ const products = [
       "./media/laptop4/img6.jpeg",
     ],
     description: `
-  <details class="spec-toggle">
-    <summary>Technical Specifications</summary>
-    <ul class="spec-list">
-      <li>Intel® Core i7-1185G7 11th Gen – 3.00GHz base speed with Intel Turbo Boost Technology</li>
-      <li>512GB SSD Storage</li>
-      <li>16GB DDR4 RAM Options</li>
-      <li>14-inch 1080p Full HD Display with Integrated Privacy Screen</li>
-      <li>Facial Recognition</li>
-      <li>Touchscreen Support</li>
-      <li>Fingerprint Scanner</li>
-      <li>x360 Convertible Design</li>
-      <li>Backlit Keyboard</li>
-      <li>High Definition Webcam + Microphone</li>
-      <li>WLAN Wi-Fi 6 (ax) & Bluetooth 5.2</li>
-      <li>3-Cell Lithium-Ion Battery</li>
-      <li>Bang & Olufsen Stereo Speakers</li>
-      <li>Excellent Battery Life</li>
-      <li>OEM Charger Included</li>
-    </ul>
-  </details>
-`,
+          <details class="spec-toggle">
+            <summary>Technical Specifications</summary>
+            <ul class="spec-list">
+              <li>Intel® Core i7-1185G7 11th Gen – 3.00GHz base speed with Intel Turbo Boost Technology</li>
+              <li>512GB SSD Storage</li>
+              <li>16GB DDR4 RAM Options</li>
+              <li>14-inch 1080p Full HD Display with Integrated Privacy Screen</li>
+              <li>Facial Recognition</li>
+              <li>Touchscreen Support</li>
+              <li>Fingerprint Scanner</li>
+              <li>x360 Convertible Design</li>
+              <li>Backlit Keyboard</li>
+              <li>High Definition Webcam + Microphone</li>
+              <li>WLAN Wi-Fi 6 (ax) & Bluetooth 5.2</li>
+              <li>3-Cell Lithium-Ion Battery</li>
+              <li>Bang & Olufsen Stereo Speakers</li>
+              <li>Excellent Battery Life</li>
+              <li>OEM Charger Included</li>
+            </ul>
+          </details>
+        `,
   },
   {
     id: 5,
@@ -151,25 +151,25 @@ const products = [
       "./media/laptop5/img5.jpeg",
     ],
     description: `
-  <details class="spec-toggle">
-    <summary>Technical Specifications</summary>
-    <ul class="spec-list">
-      <li>Intel® Celeron® N4020 CPU @ 1.10GHz</li>
-      <li>128GB Storage</li>
-      <li>4GB DDR4 RAM</li>
-      <li>Intel UHD Graphics 605</li>
-      <li>11.6-inch Screen Display</li>
-      <li>Touchscreen Support</li>
-      <li>x360 Convertible Design</li>
-      <li>2 USB Type-A Ports</li>
-      <li>1 USB Type-C Port</li>
-      <li>HDMI Port</li>
-      <li>Ethernet LAN Port</li>
-      <li>Excellent Battery Life</li>
-      <li>OEM Charger Included</li>
-    </ul>
-  </details>
-`,
+          <details class="spec-toggle">
+            <summary>Technical Specifications</summary>
+            <ul class="spec-list">
+              <li>Intel® Celeron® N4020 CPU @ 1.10GHz</li>
+              <li>128GB Storage</li>
+              <li>4GB DDR4 RAM</li>
+              <li>Intel UHD Graphics 605</li>
+              <li>11.6-inch Screen Display</li>
+              <li>Touchscreen Support</li>
+              <li>x360 Convertible Design</li>
+              <li>2 USB Type-A Ports</li>
+              <li>1 USB Type-C Port</li>
+              <li>HDMI Port</li>
+              <li>Ethernet LAN Port</li>
+              <li>Excellent Battery Life</li>
+              <li>OEM Charger Included</li>
+            </ul>
+          </details>
+        `,
   },
   {
     id: 6,
@@ -184,28 +184,28 @@ const products = [
       "./media/laptop6/img5.jpeg",
     ],
     description: `
-  <details class="spec-toggle">
-    <summary>Technical Specifications</summary>
-    <ul class="spec-list">
-      <li>Intel Core i5-10210U 10th Gen Quad-Core @ 2.11GHz (up to 4.2GHz with Intel Turbo Boost)</li>
-      <li>256GB M.2 NVMe SSD</li>
-      <li>8GB DDR4 RAM (2667 MHz)</li>
-      <li>13.3" 1920 × 1080 IPS Touch Display</li>
-      <li>x360 Convertible Touchscreen</li>
-      <li>Intel UHD Graphics 620</li>
-      <li>Spill-Resistant Backlit Keyboard</li>
-      <li>ThinkPad Pen Pro Included 🖊️</li>
-      <li>Thunderbolt 3 / USB / HDMI Ports</li>
-      <li>MicroSD Media Card Reader</li>
-      <li>720p Front-Facing Webcam</li>
-      <li>Integrated Fingerprint Reader</li>
-      <li>Facial Recognition</li>
-      <li>Windows 11 Pro (64-Bit)</li>
-      <li>Excellent Battery Life</li>
-      <li>OEM Charger Included</li>
-    </ul>
-  </details>
-`,
+          <details class="spec-toggle">
+            <summary>Technical Specifications</summary>
+            <ul class="spec-list">
+              <li>Intel Core i5-10210U 10th Gen Quad-Core @ 2.11GHz (up to 4.2GHz with Intel Turbo Boost)</li>
+              <li>256GB M.2 NVMe SSD</li>
+              <li>8GB DDR4 RAM (2667 MHz)</li>
+              <li>13.3" 1920 × 1080 IPS Touch Display</li>
+              <li>x360 Convertible Touchscreen</li>
+              <li>Intel UHD Graphics 620</li>
+              <li>Spill-Resistant Backlit Keyboard</li>
+              <li>ThinkPad Pen Pro Included 🖊️</li>
+              <li>Thunderbolt 3 / USB / HDMI Ports</li>
+              <li>MicroSD Media Card Reader</li>
+              <li>720p Front-Facing Webcam</li>
+              <li>Integrated Fingerprint Reader</li>
+              <li>Facial Recognition</li>
+              <li>Windows 11 Pro (64-Bit)</li>
+              <li>Excellent Battery Life</li>
+              <li>OEM Charger Included</li>
+            </ul>
+          </details>
+        `,
   },
   {
     id: 7,
@@ -219,24 +219,24 @@ const products = [
       "./media/laptop7/img4.jpeg",
     ],
     description: `
-  <details class="spec-toggle">
-    <summary>Technical Specifications</summary>
-    <ul class="spec-list">
-      <li>Intel® Celeron® N4100 Processor</li>
-      <li>128GB M.2 NVMe SSD</li>
-      <li>8GB DDR4 RAM (2400 MHz)</li>
-      <li>11.6-inch IPS Touch Display</li>
-      <li>x360 Convertible Touchscreen</li>
-      <li>Intel HD Graphics</li>
-      <li>Thunderbolt 3 / USB / HDMI / Ethernet Ports</li>
-      <li>Bluetooth & Wi-Fi Support</li>
-      <li>SD Card Slot</li>
-      <li>HD Front-Facing Webcam</li>
-      <li>Excellent Battery Life</li>
-      <li>OEM Accessories Included</li>
-    </ul>
-  </details>
-`,
+          <details class="spec-toggle">
+            <summary>Technical Specifications</summary>
+            <ul class="spec-list">
+              <li>Intel® Celeron® N4100 Processor</li>
+              <li>128GB M.2 NVMe SSD</li>
+              <li>8GB DDR4 RAM (2400 MHz)</li>
+              <li>11.6-inch IPS Touch Display</li>
+              <li>x360 Convertible Touchscreen</li>
+              <li>Intel HD Graphics</li>
+              <li>Thunderbolt 3 / USB / HDMI / Ethernet Ports</li>
+              <li>Bluetooth & Wi-Fi Support</li>
+              <li>SD Card Slot</li>
+              <li>HD Front-Facing Webcam</li>
+              <li>Excellent Battery Life</li>
+              <li>OEM Accessories Included</li>
+            </ul>
+          </details>
+        `,
   },
   {
     id: 8,
@@ -251,27 +251,27 @@ const products = [
       "./media/laptop1/img5.jpeg",
     ],
     description: `
-  <details class="spec-toggle">
-    <summary>Technical Specifications</summary>
-    <ul class="spec-list">
-      <li>AMD Ryzen 5 PRO 2500U w/ Radeon Vega Mobile Gfx</li>
-      <li>256GB NVMe SSD</li>
-      <li>8GB DDR4 RAM</li>
-      <li>14" Full HD display</li>
-      <li>AMD Radeon RX Vega 8 Graphics - 2GB Dedicated</li>
-      <li>Keyboard Backlight</li>
-      <li>Fingerprint Sensor</li>
-      <li>HD Camera</li>
-      <li>1x USB Type-C</li>
-      <li>2x USB Type-A 3.2 Gen 1</li>
-      <li>HDMI, Ethernet LAN, Bluetooth</li>
-      <li>3.5 mm Audio Jack</li>
-      <li>2x Stereo Speakers - Bang & Olufsen</li>
-      <li>Excellent Battery</li>
-      <li>OEM Charger Included</li>
-    </ul>
-  </details>
-`,
+          <details class="spec-toggle">
+            <summary>Technical Specifications</summary>
+            <ul class="spec-list">
+              <li>AMD Ryzen 5 PRO 2500U w/ Radeon Vega Mobile Gfx</li>
+              <li>256GB NVMe SSD</li>
+              <li>8GB DDR4 RAM</li>
+              <li>14" Full HD display</li>
+              <li>AMD Radeon RX Vega 8 Graphics - 2GB Dedicated</li>
+              <li>Keyboard Backlight</li>
+              <li>Fingerprint Sensor</li>
+              <li>HD Camera</li>
+              <li>1x USB Type-C</li>
+              <li>2x USB Type-A 3.2 Gen 1</li>
+              <li>HDMI, Ethernet LAN, Bluetooth</li>
+              <li>3.5 mm Audio Jack</li>
+              <li>2x Stereo Speakers - Bang & Olufsen</li>
+              <li>Excellent Battery</li>
+              <li>OEM Charger Included</li>
+            </ul>
+          </details>
+        `,
   },
   {
     id: 9,
@@ -287,24 +287,24 @@ const products = [
       "./media/laptop2/img6.jpeg",
     ],
     description: `
-  <details class="spec-toggle">
-    <summary>Technical Specifications</summary>
-    <ul class="spec-list">
-      <li>Intel Core i7 2.2GHz Dual-Core (Turbo Boost up to 3.2GHz)</li>
-      <li>256GB PCIe-based Flash Storage</li>
-      <li>8GB LPDDR3 RAM</li>
-      <li>Intel HD Graphics 6000</li>
-      <li>13.3-inch (Diagonal) Display</li>
-      <li>Full-Size Backlit Keyboard</li>
-      <li>720p FaceTime HD Camera</li>
-      <li>2 USB 3 Ports</li>
-      <li>Thunderbolt Port</li>
-      <li>3.5 mm Headphone Jack</li>
-      <li>Stereo Speakers</li>
-      <li>OEM Charger Included</li>
-    </ul>
-  </details>
-`,
+          <details class="spec-toggle">
+            <summary>Technical Specifications</summary>
+            <ul class="spec-list">
+              <li>Intel Core i7 2.2GHz Dual-Core (Turbo Boost up to 3.2GHz)</li>
+              <li>256GB PCIe-based Flash Storage</li>
+              <li>8GB LPDDR3 RAM</li>
+              <li>Intel HD Graphics 6000</li>
+              <li>13.3-inch (Diagonal) Display</li>
+              <li>Full-Size Backlit Keyboard</li>
+              <li>720p FaceTime HD Camera</li>
+              <li>2 USB 3 Ports</li>
+              <li>Thunderbolt Port</li>
+              <li>3.5 mm Headphone Jack</li>
+              <li>Stereo Speakers</li>
+              <li>OEM Charger Included</li>
+            </ul>
+          </details>
+        `,
   },
   {
     id: 10,
@@ -320,27 +320,27 @@ const products = [
       "./media/laptop4/img6.jpeg",
     ],
     description: `
-  <details class="spec-toggle">
-    <summary>Technical Specifications</summary>
-    <ul class="spec-list">
-      <li>Intel® Core i7-1185G7 11th Gen – 3.00GHz base speed with Intel Turbo Boost Technology</li>
-      <li>512GB SSD Storage</li>
-      <li>32GB DDR4 RAM Options</li>
-      <li>14-inch 1080p Full HD Display with Integrated Privacy Screen</li>
-      <li>Facial Recognition</li>
-      <li>Touchscreen Support</li>
-      <li>Fingerprint Scanner</li>
-      <li>x360 Convertible Design</li>
-      <li>Backlit Keyboard</li>
-      <li>High Definition Webcam + Microphone</li>
-      <li>WLAN Wi-Fi 6 (ax) & Bluetooth 5.2</li>
-      <li>3-Cell Lithium-Ion Battery</li>
-      <li>Bang & Olufsen Stereo Speakers</li>
-      <li>Excellent Battery Life</li>
-      <li>OEM Charger Included</li>
-    </ul>
-  </details>
-`,
+          <details class="spec-toggle">
+            <summary>Technical Specifications</summary>
+            <ul class="spec-list">
+              <li>Intel® Core i7-1185G7 11th Gen – 3.00GHz base speed with Intel Turbo Boost Technology</li>
+              <li>512GB SSD Storage</li>
+              <li>32GB DDR4 RAM Options</li>
+              <li>14-inch 1080p Full HD Display with Integrated Privacy Screen</li>
+              <li>Facial Recognition</li>
+              <li>Touchscreen Support</li>
+              <li>Fingerprint Scanner</li>
+              <li>x360 Convertible Design</li>
+              <li>Backlit Keyboard</li>
+              <li>High Definition Webcam + Microphone</li>
+              <li>WLAN Wi-Fi 6 (ax) & Bluetooth 5.2</li>
+              <li>3-Cell Lithium-Ion Battery</li>
+              <li>Bang & Olufsen Stereo Speakers</li>
+              <li>Excellent Battery Life</li>
+              <li>OEM Charger Included</li>
+            </ul>
+          </details>
+        `,
   },
 ];
 
@@ -428,12 +428,12 @@ function restoreScrollPosition() {
 
     if (cart.length === 0) {
       cartItemsContainer.innerHTML = `
-                        <div class="empty-cart">
-                            <i class="fas fa-shopping-cart"></i>
-                            <p>Your cart is empty</p>
-                            <a href="#products" class="btn">Continue Shopping</a>
-                        </div>
-                    `;
+                                <div class="empty-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Your cart is empty</p>
+                                    <a href="#products" class="btn">Continue Shopping</a>
+                                </div>
+                            `;
       cartTotalAmount.textContent = "0.00";
       grandTotalElement.textContent = "0.00";
       if (checkoutBtn) checkoutBtn.disabled = true;
@@ -450,20 +450,24 @@ function restoreScrollPosition() {
       const cartItem = document.createElement("div");
       cartItem.className = "cart-item";
       cartItem.innerHTML = `
-                        <img src="${item.image}" alt="${
+                                <img src="${item.image}" alt="${
         item.name
       }" class="cart-item-image">
-                        <div class="cart-item-details">
-                            <h4 class="cart-item-title">${item.name}</h4>
-                            <p>₵${item.price.toFixed(2)} × ${item.quantity}</p>
-                            <p class="cart-item-price">₵${itemTotal.toFixed(
-                              2
-                            )}</p>
-                        </div>
-                        <button class="cart-item-remove" data-id="${
-                          item.id
-                        }">&times;</button>
-                    `;
+                                <div class="cart-item-details">
+                                    <h4 class="cart-item-title">${
+                                      item.name
+                                    }</h4>
+                                    <p>₵${item.price.toFixed(2)} × ${
+        item.quantity
+      }</p>
+                                    <p class="cart-item-price">₵${itemTotal.toFixed(
+                                      2
+                                    )}</p>
+                                </div>
+                                <button class="cart-item-remove" data-id="${
+                                  item.id
+                                }">&times;</button>
+                            `;
       cartItemsContainer.appendChild(cartItem);
     });
 
@@ -559,84 +563,84 @@ function restoreScrollPosition() {
   // Create and inject video styles
   const videoStyles = document.createElement("style");
   videoStyles.textContent = `
-    .product-gallery {
-      display: flex;
-      transition: transform 0.3s ease;
-      height: 400px; /* Fixed height for gallery */
-    }
-    
-    .product-gallery > * {
-      min-width: 100%;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #000;
-    }
-    
-    .product-gallery img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-    
-    .video-container {
-      position: relative;
-      width: 100%;
-      height: 80%;
-    }
-    
-    .product-video {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-      background: #000;
-    }
-    
-    .video-play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 60px;
-      height: 60px;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 24px;
-      cursor: pointer;
-      z-index: 10;
-      transition: opacity 0.3s;
-    }
-    
-    .video-play-button.hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-    
-    .gallery-indicators {
-      display: flex;
-      justify-content: center;
-      margin-top: 15px;
-    }
-    
-    .gallery-indicator {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #ccc;
-      margin: 0 5px;
-      cursor: pointer;
-    }
-    
-    .gallery-indicator.active {
-      background: #333;
-    }
-  `;
+            .product-gallery {
+              display: flex;
+              transition: transform 0.3s ease;
+              height: 400px; /* Fixed height for gallery */
+            }
+            
+            .product-gallery > * {
+              min-width: 100%;
+              flex-shrink: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: #000;
+            }
+            
+            .product-gallery img {
+              max-width: 100%;
+              max-height: 100%;
+              object-fit: contain;
+            }
+            
+            .video-container {
+              position: relative;
+              width: 100%;
+              height: 80%;
+            }
+            
+            .product-video {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              display: block;
+              background: #000;
+            }
+            
+            .video-play-button {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 60px;
+              height: 60px;
+              background: rgba(0, 0, 0, 0.6);
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: white;
+              font-size: 24px;
+              cursor: pointer;
+              z-index: 10;
+              transition: opacity 0.3s;
+            }
+            
+            .video-play-button.hidden {
+              opacity: 0;
+              pointer-events: none;
+            }
+            
+            .gallery-indicators {
+              display: flex;
+              justify-content: center;
+              margin-top: 15px;
+            }
+            
+            .gallery-indicator {
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              background: #ccc;
+              margin: 0 5px;
+              cursor: pointer;
+            }
+            
+            .gallery-indicator.active {
+              background: #333;
+            }
+          `;
   document.head.appendChild(videoStyles);
 
   function updateGallery() {
@@ -778,34 +782,6 @@ function restoreScrollPosition() {
     return container;
   }
 
-  // Swipe navigation function
-  function enableSwipeNavigation(container, onSwipeLeft, onSwipeRight) {
-    let startX = 0;
-    let endX = 0;
-
-    container.addEventListener("touchstart", (e) => {
-      startX = e.touches[0].clientX;
-    });
-
-    container.addEventListener("touchmove", (e) => {
-      endX = e.touches[0].clientX;
-    });
-
-    container.addEventListener("touchend", () => {
-      const deltaX = startX - endX;
-      const threshold = 50; // Minimum swipe distance
-
-      if (deltaX > threshold) {
-        onSwipeLeft(); // Swipe left → next
-      } else if (deltaX < -threshold) {
-        onSwipeRight(); // Swipe right → previous
-      }
-
-      startX = 0;
-      endX = 0;
-    });
-  }
-
   function openProductModal(product) {
     saveScrollPosition();
     currentSlide = 0; // Reset to first slide
@@ -835,13 +811,13 @@ function restoreScrollPosition() {
 
     // Create product details
     productDetails.innerHTML = `
-      <h2>${product.name}</h2>
-      <p class="product-price">₵${product.price.toFixed(2)}</p>
-      <div>${product.description}</div>
-      <button class="btn btn-primary add-to-cart" data-id="${
-        product.id
-      }">Add to Cart</button>
-    `;
+              <h2>${product.name}</h2>
+              <p class="product-price">₵${product.price.toFixed(2)}</p>
+              <div>${product.description}</div>
+              <button class="btn btn-primary add-to-cart" data-id="${
+                product.id
+              }">Add to Cart</button>
+            `;
 
     // Force gallery reset before showing
     setTimeout(() => {
@@ -858,23 +834,6 @@ function restoreScrollPosition() {
     // Show modal
     productModal.style.display = "flex";
     document.body.classList.add("modal-open");
-
-    // Enable swipe navigation
-    enableSwipeNavigation(
-      productGallery,
-      () => {
-        // Swipe left
-        if (currentSlide < productGallery.children.length - 1) {
-          goToSlide(currentSlide + 1);
-        }
-      },
-      () => {
-        // Swipe right
-        if (currentSlide > 0) {
-          goToSlide(currentSlide - 1);
-        }
-      }
-    );
 
     currentSlide = 0;
     updateGallery();
@@ -1166,21 +1125,23 @@ document.addEventListener("DOMContentLoaded", () => {
     productCard.dataset.id = product.id;
 
     productCard.innerHTML = `
-      <div class="product-image">
-        <img src="${product.images[0]}" alt="${product.name}" loading="lazy">
-      </div>
-      <div class="product-info">
-        <h3>${product.name}</h3>
-        <p class="product-category">${product.category}</p>
-        <p class="product-price">₵${product.price.toFixed(2)}</p>
-        <div class="product-buttons">
-          <button class="btn view-details">View Details</button>
-          <button class="btn add-to-cart" data-id="${
-            product.id
-          }">Add to Cart</button>
-        </div>
-      </div>
-    `;
+              <div class="product-image">
+                <img src="${product.images[0]}" alt="${
+      product.name
+    }" loading="lazy">
+              </div>
+              <div class="product-info">
+                <h3>${product.name}</h3>
+                <p class="product-category">${product.category}</p>
+                <p class="product-price">₵${product.price.toFixed(2)}</p>
+                <div class="product-buttons">
+                  <button class="btn view-details">View Details</button>
+                  <button class="btn add-to-cart" data-id="${
+                    product.id
+                  }">Add to Cart</button>
+                </div>
+              </div>
+            `;
 
     productsContainer.appendChild(productCard);
   });
